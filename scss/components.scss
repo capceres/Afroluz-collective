@@ -1,0 +1,77 @@
+// destacado principal
+.featured__main {
+    position: relative;
+    height: 37.375rem;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.4);
+
+    @media (max-width: 1024px) {
+        height: 30rem;
+    }
+
+    @media (max-width: 768px) {
+        height: 20rem;
+    }
+}
+
+.featured__caption {
+    position: relative;
+    text-align: center;
+    top: 45%;
+    font-family: $font-bold;
+    color: $color-white;
+
+    @media (max-width: 1024px) {
+        top: 20%;
+        
+    }
+}
+
+.featured__img {
+    top: -100%;
+    z-index: -1;
+}
+
+.featured__title {
+    font-size: 4rem;
+}
+
+.featured__listen {
+    width: 24rem;
+    margin: auto;
+    font-family: $font-main;
+    background-color: rgba(255, 255, 255, 0.7); 
+    color: $color-1;   
+}
+
+// boton
+.btn__main {
+    margin: 0 0 1rem;
+    padding: 0.5rem 1.5rem 0.6rem;
+    border: $border;
+    border-radius: $border-radius;
+    font-size: $titulo-size;
+    color: $color-1;
+    background-color: $color-4;
+
+    &:hover {
+        color: $color-white;
+        background-color: $color-2;
+    }
+
+    &:active {
+        color: $color-1;
+        background-color: $color-2;
+    }
+
+    &:focus {
+        box-shadow: none;
+        outline: 2px solid white;
+    }
+}
+
+// icono redes musica
+.ico-music {
+    width: 2.625rem;
+    margin: 0 1.5rem;
+}

@@ -1,0 +1,116 @@
+@font-face {
+  font-family: "catamaran-regular";
+  src: url("../resources/fonts/Catamaran/Catamaran-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "catamaran-semibold";
+  src: url("../resources/fonts/Catamaran/Catamaran-SemiBold.ttf") format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "catamaran-bold";
+  src: url("../resources/fonts/Catamaran/Catamaran-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "catamaran-light";
+  src: url("../resources/fonts/Catamaran/Catamaran-Light.ttf") format("truetype");
+  font-weight: light;
+}
+body {
+  font-family: "catamaran-regular", sans-serif;
+}
+
+.nav__main {
+  background-color: #fff;
+}
+.nav__main .nav-item {
+  width: 7.1875rem;
+  font-family: "catamaran-semibold", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+}
+.nav__main .nav-item .nav-link {
+  color: #000640;
+}
+
+.logo {
+  width: 7.5rem;
+}
+
+.featured__main {
+  position: relative;
+  height: 37.375rem;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+@media (max-width: 1024px) {
+  .featured__main {
+    height: 30rem;
+  }
+}
+@media (max-width: 768px) {
+  .featured__main {
+    height: 20rem;
+  }
+}
+
+.featured__caption {
+  position: relative;
+  text-align: center;
+  top: 45%;
+  font-family: "catamaran-bold", sans-serif;
+  color: #fff;
+}
+@media (max-width: 1024px) {
+  .featured__caption {
+    top: 20%;
+  }
+}
+
+.featured__img {
+  top: -100%;
+  z-index: -1;
+}
+
+.featured__title {
+  font-size: 4rem;
+}
+
+.featured__listen {
+  width: 24rem;
+  margin: auto;
+  font-family: "catamaran-regular", sans-serif;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #000640;
+}
+
+.btn__main {
+  margin: 0 0 1rem;
+  padding: 0.5rem 1.5rem 0.6rem;
+  border: 1px solid #000640;
+  border-radius: 1rem;
+  font-size: 1.25rem;
+  color: #000640;
+  background-color: #DEC054;
+}
+.btn__main:hover {
+  color: #fff;
+  background-color: #8D741B;
+}
+.btn__main:active {
+  color: #000640;
+  background-color: #8D741B;
+}
+.btn__main:focus {
+  box-shadow: none;
+  outline: 2px solid white;
+}
+
+.ico-music {
+  width: 2.625rem;
+  margin: 0 1.5rem;
+}
+
+/*# sourceMappingURL=base.css.map */

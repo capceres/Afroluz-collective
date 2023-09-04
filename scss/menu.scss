@@ -1,0 +1,18 @@
+// menu principal
+.nav__main {
+    background-color: $color-white;
+    .nav-item {
+        width: 7.1875rem;
+        font-family: $font-semibold;
+        text-align: center;
+        text-transform: uppercase;
+        
+        .nav-link {
+            color: $color-1;
+        }
+    }
+}
+
+.logo {
+    width: 7.5rem;
+}
