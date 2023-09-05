@@ -22,6 +22,12 @@ body {
   font-family: "catamaran-regular", sans-serif;
 }
 
+.footer__main {
+  padding: 2rem 1rem;
+  color: #fff;
+  background-color: #000640;
+}
+
 .nav__main {
   background-color: #fff;
 }

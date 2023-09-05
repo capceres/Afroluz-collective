@@ -2,3 +2,10 @@
 body {
     font-family: $font-main;
 }
+
+// footer
+.footer__main {
+    padding: 2rem 1rem;
+    color: $color-white;
+    background-color: $color-1;
+}
