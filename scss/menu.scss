@@ -36,7 +36,7 @@
                 background-size: 2rem;
             }
 
-            &.collapsed {
+            &[aria-expanded="false"] {
 
                 .navbar-toggler-icon {
                     background-image: url("../resources/img/menu.svg");

@@ -72,7 +72,7 @@ body {
     background-image: url("../resources/img/menu-close.svg");
     background-size: 2rem;
   }
-  .nav__main .navbar-toggler.collapsed .navbar-toggler-icon {
+  .nav__main .navbar-toggler[aria-expanded=false] .navbar-toggler-icon {
     background-image: url("../resources/img/menu.svg");
     background-size: 2.5rem;
   }
