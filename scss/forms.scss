@@ -1,0 +1,22 @@
+// estilos formularios
+.form__contact {
+
+    .form__item {
+        margin: 0.625rem 0;
+    }
+
+    input, textarea {
+        padding: 0.25rem;
+        border: 1px solid $color-1;
+        border-radius: 0.5rem;
+
+        &:focus {
+            outline: 2px solid $color-2;
+        }
+    }
+
+    .btn__main {
+        margin-top: 1.875rem;
+    }
+}
+

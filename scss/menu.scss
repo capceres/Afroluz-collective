@@ -1,6 +1,7 @@
 // menu principal
 .nav__main {
     background-color: $color-white;
+
     .nav-item {
         width: 7.1875rem;
         font-family: $font-semibold;
@@ -9,6 +10,61 @@
         
         .nav-link {
             color: $color-1;
+            border: 2px solid transparent;
+            border-radius: $border-radius;
+
+            &:hover {
+                color: $color-1;
+                border-color: $color-3 !important;
+            }
+
+            &:active {
+                border-color: $color-1 !important;
+                box-shadow: inset -2px 4px 4px rgba(0, 0, 0, 0.25);
+            }
+        }
+    }
+
+    @media (max-width: 991px) {
+        height: 5rem;
+
+        .navbar-toggler {
+            border: 0;
+
+            .navbar-toggler-icon {
+                background-image: url("../resources/img/menu-close.svg");
+                background-size: 2rem;
+            }
+
+            &.collapsed {
+
+                .navbar-toggler-icon {
+                    background-image: url("../resources/img/menu.svg");
+                    background-size: 2.5rem;
+                }
+            }
+        }
+
+
+
+        .navbar-collapse {
+            position: absolute;
+            top: 5rem;
+            right: 0;
+            width: 80%;
+            background-color: $color-white;
+            box-shadow: 0px 4px 10px 0px rgba(0,0,0, 0.4);
+            z-index: 1000;
+        }
+
+        .nav-item {
+            width: 100%;
+            padding: 0;
+            text-align: left;
+
+            a {
+                padding: 0.5rem 2.25rem;
+            }
         }
     }
 }

@@ -4,14 +4,6 @@
     height: 37.375rem;
     overflow: hidden;
     background-color: rgba(0,0,0,0.4);
-
-    @media (max-width: 1024px) {
-        height: 30rem;
-    }
-
-    @media (max-width: 768px) {
-        height: 20rem;
-    }
 }
 
 .featured__caption {
@@ -20,11 +12,6 @@
     top: 45%;
     font-family: $font-bold;
     color: $color-white;
-
-    @media (max-width: 1024px) {
-        top: 20%;
-        
-    }
 }
 
 .featured__img {
@@ -41,7 +28,63 @@
     margin: auto;
     font-family: $font-main;
     background-color: rgba(255, 255, 255, 0.7); 
-    color: $color-1;   
+    color: $color-1;
+
+    a {
+        display: inline-block;
+        text-decoration: none;
+
+        img {
+            transition: 0.1s;
+
+            &:hover {
+                box-shadow: 0 0 10px 7px #fff;
+                background-color: white;
+                border-radius: 0.1rem;
+            }
+
+            &:active {
+                filter: blur(2px);
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .featured__main {
+        height: 30rem;
+    }
+    .featured__caption {
+        top: 20%;        
+    }
+    .featured__title {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .featured__main  {
+        height: 23rem;
+    }
+
+    .featured__title {
+        font-size: 2.25rem;
+    }
+}
+
+@media (max-width: 540px) {
+    .featured__main  {
+        height: 18.5rem;
+    }
+
+    .featured__caption {
+        top: 16%;
+      }
+
+    .featured__listen {
+        width: 100%;
+        background-color: rgba(236, 236, 236, 1);
+    }
 }
 
 // boton
@@ -51,6 +94,7 @@
     border: $border;
     border-radius: $border-radius;
     font-size: $titulo-size;
+    font-family: $font-bold;
     color: $color-1;
     background-color: $color-4;
 
@@ -65,9 +109,28 @@
     }
 
     &:focus {
-        box-shadow: none;
-        outline: 2px solid white;
+        box-shadow: 0 0 0 .25rem rgba(255, 255, 255, 0.75);;
+        outline: 2px solid $color-1;
     }
+}
+
+// boton secundario
+.btn--secondary {
+    @extend .btn__main;
+    font-size: 0.875rem;
+    border-radius: 0.75rem;
+
+    &:hover {
+        color: $color-1;
+        background-color: $color-3;
+    }
+
+    &:active {
+        color: $color-white;
+        background-color: $color-1;
+        border-color: $color-white;
+    }
+
 }
 
 // icono redes musica
@@ -76,5 +139,259 @@
     margin: 0 1.5rem;
 }
 
+// carrusel
+.carousel__multiple {
+
+    .carousel-control {
+        top: 46%;
+        width: 2.5rem;
+        height: 2.5rem;
+        background-color: $color-4;
+        border: 1px solid $color-1;
+        border-radius: 0.5rem;
+        opacity: 1;
+        transition: 0.2s;
+
+        &:hover {
+            background-color: $color-2;
+
+            .carousel-control-next-icon {
+                background-image: url("../resources/img/arrow-right-active.svg");
+    
+            }
+
+            .carousel-control-prev-icon {
+                background-image: url("../resources/img/arrow-left-active.svg");
+    
+            }
+        }
+
+        &:active {
+            .carousel-control-next-icon {
+                background-image: url("../resources/img/arrow-right.svg");
+    
+            }
+
+            .carousel-control-prev-icon {
+                background-image: url("../resources/img/arrow-left.svg");
+    
+            }
+        }
+
+        
+
+
+    }
+
+    .carousel-inner {
+        background-color: $color-grey;
+
+        a {
+            text-decoration: none;
+            transition: 0.2s;
+
+            &:hover {
+
+                .card {
+                    border-color: transparent;
+                    transition: 0.2s;
+                }
+
+                .card-text {
+                    opacity: 1;
+                }
+            }
+
+            &:focus {
+
+                .card-text {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .carousel-control-prev {
+        left: 1rem;
+    }
+
+    .carousel-control-prev-icon {
+        background-image: url("../resources/img/arrow-left.svg");
+    }
+
+    .carousel-control-next-icon {
+        background-image: url("../resources/img/arrow-right.svg");
+    }
+
+    .carousel-control-next {
+        right: 1rem;
+    }
+
+    .card {
+        border: 2px solid $color-4;
+        border-radius: 0;
+    }
+
+    .card-body {
+        padding: 0;        
+    }
+
+    .card-title {
+        margin: 1.25rem 1rem 0.5rem;
+        color: $color-1;
+    }
+
+    .card-text {        
+        padding: 0.75rem 1rem;
+        color: $color-1;
+        background-color: $color-4;
+        opacity: 0;
+    }
+
+    @media (min-width: 768px) {
+
+        .carousel-inner {
+          display: flex;
+          padding: 1rem 4.5rem;
+        }
+
+        .carousel-item {
+          margin-right: 0;
+          flex: 0 0 33.333333%;
+          display: block;
+          padding: 0 1.25rem;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .carousel-inner {
+            padding: 1rem 1rem 5rem;
+
+            .card-text {
+                opacity: 1;
+
+            }
+          }
+
+        .carousel-control {
+            top: auto;
+            bottom: 1rem;
+        }
+      }
+
+}
+
+
 // destacados discos
- 
+.product__disc {
+
+    .card {
+        border: 0;
+
+        img {
+            border-radius: 0;
+        }
+
+        .card-body {
+            padding: 0;
+        }
+
+        .card-title {
+            margin: 0.75rem 0 1.25rem;
+            font-size: 1.5rem;
+        }
+
+        .card-text {
+            margin-bottom: 0.5rem;
+            font-size: 1.125rem;
+        }
+
+        .product__info {
+            margin-bottom: 1rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .card-body {
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+// gira
+.footer__dates {
+    padding: 0;
+
+    li {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        padding: 0.5rem 1rem;
+        border-bottom: 1px solid $color-3;
+
+        button {
+            margin: 0;
+        }
+
+        &:last-child {
+            border-bottom: 0;
+        }
+    }
+}
+
+.footer__media {
+
+    ul {
+        justify-content: end;
+    }
+
+    li {
+        margin-left: 2rem;
+        list-style: none;
+        width: 2.5rem;
+
+        a {
+            display: inline-block;
+        }
+
+        img {
+            &:hover {
+                box-shadow: 0 0 8px 8px #DEC0545E;
+                background-color: #DEC0545E;
+                border-radius: 0.1rem;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+
+        margin: 1rem 0;
+
+        ul {
+            justify-content: center;
+        }
+
+        li {
+            margin: 0 1.5rem;
+        }
+        
+    }
+
+    @media (max-width: 540px) {
+
+        margin: 4.75rem 0;
+
+    }
+
+}
+
+.footer__logo {
+    @media (max-width: 768px) {
+
+        text-align: center;
+
+        img {
+            width: 7rem;
+        }
+    }
+}
